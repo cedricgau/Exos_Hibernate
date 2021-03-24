@@ -28,11 +28,10 @@ public class Test1_popul
 	       SessionFactory factory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
 	       
 	       session = factory.openSession();
-
-		
-		
 		
 		session.beginTransaction();
+		
+		
 		//DIFFERENTS OBJETS SONT A ENREGISTRE DANS LA BD
 		//AJOUTER LES OBJECT CREES AU CONTEXTE DE PERSISTANCE
 		
