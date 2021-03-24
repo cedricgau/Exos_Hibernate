@@ -105,6 +105,7 @@ public class Test1_popul
 
 		session2.close();// session hibernate
 		System.out.println("session2 close");*/
+		
 		Session session2 = factory.openSession();
 		session2.beginTransaction();
 		session2.saveOrUpdate(a1);
