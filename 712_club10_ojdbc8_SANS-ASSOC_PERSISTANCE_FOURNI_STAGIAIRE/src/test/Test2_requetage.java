@@ -86,32 +86,31 @@ public class Test2_requetage
 		//////////////////////////////////////////////////////////
 
 		//Affichez le premier Adherent entré précédemment
-		//Entraineur e1 = (Entraineur )session.get(Entraineur.class, new Integer(1));
-		Entraineur e1 = (Entraineur )session.get(Entraineur.class, 1);// auto-boxing !!
-		System.out.println(" un entraineur   " + e1);
+		
+		System.out.println("\n\nRecherche d'un objet particulier : ");
+		Entraineur e1 = (Entraineur )session.get(Entraineur.class, 122);// auto-boxing !!
+		System.out.println(" un Entraineur   " + e1);
 
 		//Affichez un sport présent dans la BD
-		Sport s1 = (Sport )session.get(Sport.class, 6);// !!!!!!!
-		System.out.println(" un Sport   " + s1);
+		Sport s1 = (Sport )session.get(Sport.class, 124);// !!!!!!!
+		System.out.println("\n un Sport   " + s1);
 
 
 		//??????
-		Sport s2 = (Sport )session.get(Sport.class, 6);// !!!!!!!
-		System.out.println(" un autre Sport  ? " + s2);
+		Sport s2 = (Sport )session.get(Sport.class, 125);// !!!!!!!
+		System.out.println("\n un autre Sport  ? " + s2);
+		
+		
 		///////////////////////////////////////////////////////////
 		//TRAVAIL A REALISER : répondez à la question plus haut
 		// Comparer les objets s1 et s2
 		// A-t-on affaire à des clônes ? Si non alors expliquez ...
 		///////////////////////////////////////////////////////////
-		// TODO
-		// TODO
-		// TODO
-		// TODO
-		// TODO
-		// TODO
+		
+		if(s1.equals(s2)) System.out.println("\nClone !!!");
 		
 		
 		session.close();
-		System.out.println("Terminé");
+		System.out.println("\n\nTerminé");
 	}
 }
