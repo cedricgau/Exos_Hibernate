@@ -92,7 +92,7 @@ public class Test2_requetage
 		System.out.println(" un Entraineur   " + e1);
 
 		//Affichez un sport présent dans la BD
-		Sport s1 = (Sport )session.get(Sport.class, 124);// !!!!!!!
+		Sport s1 = (Sport )session.get(Sport.class, 125);// !!!!!!!
 		System.out.println("\n un Sport   " + s1);
 
 
@@ -107,7 +107,7 @@ public class Test2_requetage
 		// A-t-on affaire à des clônes ? Si non alors expliquez ...
 		///////////////////////////////////////////////////////////
 		
-		if(s1.equals(s2)) System.out.println("\nClone !!!");
+		if(s1==s2) System.out.println("\nClone !!!");
 		
 		
 		session.close();

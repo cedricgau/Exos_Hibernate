@@ -106,6 +106,13 @@ public class Test1_popul
 
 		session2.close();// session hibernate
 		System.out.println("session2 close");*/
+		Session session2 = factory.openSession();
+		session2.beginTransaction();
+		session2.saveOrUpdate(a1);
+		a1.setPrenom("titi");
+		session2.getTransaction().commit();
+		session2.close();
+		
 
 	}
 	catch(ParseException ex)
